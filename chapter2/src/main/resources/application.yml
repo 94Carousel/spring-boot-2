@@ -1,3 +1,6 @@
 my:
-  name: tinyfan
+  name: tinyfan小贩
   age: 23
+env:
+  title: 小贩
+  name: tinyfan
