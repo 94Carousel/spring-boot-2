@@ -1,13 +1,16 @@
 package com.tinyfan.chapter2.configration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+@PropertySource("classpath:properties/config2.properties")
 @ConfigurationProperties(prefix = "my")
-public class MyConfiguration {
+public class Configuration2 {
     private int age;
     private String name;
+    private String qq;
 
     public int getAge() {
         return age;
@@ -21,15 +24,24 @@ public class MyConfiguration {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "MyConfiguration{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getQq() {
+        return qq;
+    }
+
+    public void setQq(String qq) {
+        this.qq = qq;
+    }
+
+    @Override
+    public String toString() {
+        return "MyConfiguration1{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                ", qq='" + qq + '\'' +
+                '}';
     }
 }
