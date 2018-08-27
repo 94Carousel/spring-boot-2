@@ -1,0 +1,5 @@
+logging:
+  file: chapter3.log
+  level:
+    root: info
+    com.tinyfan: trace
